@@ -336,3 +336,67 @@ footer{
     background-color: hsl(260, 8%, 14%);
     color: #fff;
   }
+
+/* Medi Queries */
+  @media screen and (max-width: 480px) {
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .links, .nav-btns, .illustrator {
+        display: none
+    }
+    .content {
+      text-align: center;
+    }
+    .shorten, #userUrl, .btn-submit{
+      width: 100%;
+    }
+    #userUrl {
+      margin-bottom: 24px;
+    }
+    .shortenLink {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .stats-container {
+      padding-top: 55px;
+    }
+    .cards, .footer-container, .useful-list{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .stats-card {
+      width: 100%;
+    }
+    .useful-list {
+      width: 100%;
+    }
+    .footer-container {
+      padding-top: 24px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .stats-card {
+    width: 100%;
+  }
+  .brand-img {
+    width: 10%;
+    height: auto;
+  }
+}
