@@ -10,7 +10,6 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -44,10 +43,6 @@ Users should be able to:
 - Flexbox
 - Bootstrap
 - Javascript
-
-### Continued development
-
-In future, i will polish the project by adding responsive layout for mobile and tablet devices. Also refactor the code for CSS style.
 
 ### Useful resources
 
