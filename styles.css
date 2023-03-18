@@ -1,5 +1,6 @@
 *, *::before, *::after{
     box-sizing: border-box;
+    outline: none;
 }
 html {
     scroll-behavior: smooth;
@@ -9,7 +10,10 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 500;
-    /* color:hsl(260, 8%, 14%); */
+    background-color: #f2f2f2;
+}
+a {
+  text-decoration: none;
 }
 
 /* Navbar Style */
@@ -24,17 +28,16 @@ body{
   overflow: hidden;
   font-size: 16px;
 }
-.nav-links{
+.nav-links,
+.links {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .links{
- display: flex;
- align-items: center;
- justify-content: center;
  margin: 0;
 }
+ 
 .links li{
   list-style: none;
   margin: 0;
@@ -100,13 +103,18 @@ p{
  margin: 1em 0 1.5em;
  color: hsl(0, 0%, 75%);
 }
+#error-msg {
+  margin: 12px auto auto 1em;
+  font-style: italic;
+  color: red;
+  font-weight: 100;
+  font-size: .7em;
+}
 
 /* Shorten div style */
 .shorten{
   border-radius: 8px;
   max-width: auto;
-  /* width: 820px; */
-  /* /* margin: auto; */
   padding: 48px 44px;  
   background: url("images/bg-shorten-desktop.png"), hsl(260, 8%, 14%);
   background-repeat: no-repeat; 
@@ -117,6 +125,7 @@ p{
   left: 50%;
   transform: translate(-50%);
   margin-top: -60px;
+  margin-bottom: auto;
   z-index: 1;
   
 }
@@ -139,6 +148,15 @@ input[type="text"]{
 input[type="text"]:focus{
   border: none;
 }
+
+.user-url {
+  display: inline-block;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .btn-submit{
   margin: 0 12px;
   padding: 8px 20px;
@@ -267,7 +285,6 @@ footer{
 .list li{
   list-style: none;
   line-height: 2;
-  /* text-align: start; */
 }
 .company{
   margin-top: 28px;
@@ -293,7 +310,6 @@ footer{
   align-items: center;
   flex-direction: row;
   background-color: hsl(0, 0%, 75%);
-  
   color:hsl(180, 66%, 49%) !important;
 }
 .result-list{
@@ -320,7 +336,6 @@ footer{
 .newUrl-btn{
   padding: 8px 10px;
   border-radius: 0.2rem;
-  /* color: #fff; */
   font-size: 1rem;
   text-align: center;
   background-color: hsl(180, 66%, 49%);
@@ -336,3 +351,80 @@ footer{
     background-color: hsl(260, 8%, 14%);
     color: #fff;
   }
+
+
+  /* Media queries */
+  @media screen and (max-width: 480px) {
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f2f2f2;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+    }
+    .links, 
+    .nav-btns, 
+    .illustrator {
+        display: none
+    }
+    .content {
+      text-align: center;
+      margin-top: 45%;
+    }
+    .shorten, #userUrl, .btn-submit{
+      width: 100%;
+      padding: 22px 12px;
+    }
+    #userUrl {
+      margin-bottom: 24px;
+    }
+    .shortenLink {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .user-url{
+      display: none;
+    }
+    .stats-container {
+      padding: 55px 12px auto;
+    }
+    .cards, .footer-container, .useful-list{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .stats-card {
+      width: 100%;
+      margin: 24px auto;
+    }
+    .useful-list {
+      width: 100%;
+    }
+    .footer-container {
+      padding-top: 24px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .stats-card {
+    width: 100%;
+  }
+  .brand-img {
+    width: 10%;
+    height: auto;
+  }
+}
